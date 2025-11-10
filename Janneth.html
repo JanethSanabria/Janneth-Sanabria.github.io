@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Janneth Sanabria Gómez - Environmental Microbiology Researcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .section h2 {
+            color: #1e3c72;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid #2a5298;
+        }
+        
+        .affiliations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .affiliation-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid #2a5298;
+        }
+        
+        .affiliation-card h3 {
+            color: #1e3c72;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .research-areas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .research-tag {
+            background: #e8f4f8;
+            color: #1e3c72;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .highlight-box {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .highlight-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .highlight-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-item {
+            padding: 1.5rem 0;
+            border-left: 3px solid #2a5298;
+            padding-left: 2rem;
+            margin-left: 1rem;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: #2a5298;
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 1.5rem;
+        }
+        
+        .timeline-item h3 {
+            color: #1e3c72;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-date {
+            color: #7f8c8d;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .awards-list {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .award-item {
+            background: #fff3cd;
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .award-item strong {
+            color: #856404;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        
+        .links-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .link-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #2a5298;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .link-button:hover {
+            background: #1e3c72;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Professor Janneth Sanabria Gómez</h1>
+            <p class="subtitle">Senior Researcher in Environmental Microbiology and Biotechnology</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <a href="mailto:janeth.sanabria@correounivalle.edu.co" style="color: white;">janeth.sanabria@correounivalle.edu.co</a>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>+57 2 3212100 ext 3923</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Universidad del Valle, Cali, Colombia</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>About</h2>
+            <p>Associate Professor at Universidad del Valle since 1997 and Honorary Senior Research Fellow at Murdoch University, Australia. With over 25 years of experience directing the Environmental Microbiology and Biotechnology Laboratory and leading the BIOX-ENERGY research group (ranked A1 by Minciencias). Founder and president of the Environmental Microbiology and Biotechnology Latin American Association.</p>
+            
+            <div class="affiliations">
+                <div class="affiliation-card">
+                    <h3>Universidad del Valle</h3>
+                    <p>Associate Professor (1997-present)</p>
+                    <p>Laboratory Manager, Faculty of Engineering</p>
+                </div>
+                <div class="affiliation-card">
+                    <h3>Murdoch University</h3>
+                    <p>Honorary Senior Research Fellow</p>
+                    <p>Australian National Phenome Center</p>
+                </div>
+                <div class="affiliation-card">
+                    <h3>BIOX-ENERGY Group</h3>
+                    <p>Director and Founder</p>
+                    <p>Ranking A1 by Minciencias Colombia</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Research Focus</h2>
+            <p>My research focuses on environmental microbiomes and disinfection, combining microbial ecology with culture and molecular techniques. I have pioneered innovative culture methods for beneficial microorganisms in bioreactors, contributing to waste valorization and human health applications.</p>
+            
+            <div class="research-areas">
+                <span class="research-tag">Environmental Microbiomes</span>
+                <span class="research-tag">Water Disinfection</span>
+                <span class="research-tag">Bioreactor Technology</span>
+                <span class="research-tag">Human Gut Microbiome</span>
+                <span class="research-tag">Waste Valorization</span>
+                <span class="research-tag">Bioremediation</span>
+                <span class="research-tag">Nitrogen Cycle</span>
+                <span class="research-tag">Advanced Oxidation Processes</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Career Highlights</h2>
+            <div class="highlights">
+                <div class="highlight-box">
+                    <span class="highlight-number">25+</span>
+                    <p>Research Projects Led</p>
+                </div>
+                <div class="highlight-box">
+                    <span class="highlight-number">70+</span>
+                    <p>Graduate & Undergraduate Students Supervised</p>
+                </div>
+                <div class="highlight-box">
+                    <span class="highlight-number">50+</span>
+                    <p>Publications</p>
+                </div>
+                <div class="highlight-box">
+                    <span class="highlight-number">50+</span>
+                    <p>Conference Contributions</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <div class="timeline-item">
+                <span class="timeline-date">2003-2004</span>
+                <h3>Post-Doctoral Research</h3>
+                <p>École Polytechnique Fédérale de Lausanne (EPFL), Switzerland</p>
+                <p>Focus: Biological and Chemical effects in dark and under light irradiation on E. coli</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">1991-1995</span>
+                <h3>Doctorate in Biological Science - Microbiology</h3>
+                <p>National University AL-FARABI & National Institute of Microbiology and Virology, Kazakhstan</p>
+                <p>Thesis: Isolation of entomopathogenic Bacillus and study of their cultural characteristics and insecticidal effect</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">1984-1989</span>
+                <h3>Bachelor in Biology</h3>
+                <p>Universidad Pedagógica Nacional, Bogotá, Colombia</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>International Collaborations</h2>
+            <p>Throughout my career, I have collaborated with leading international institutions including:</p>
+            <ul style="margin-top: 1rem; padding-left: 2rem; line-height: 2;">
+                <li>École Polytechnique Fédérale de Lausanne (EPFL), Switzerland</li>
+                <li>UNESCO-IHE, Netherlands</li>
+                <li>Murdoch University, Australia</li>
+                <li>Nijmegen Institute, Netherlands</li>
+                <li>Potsdam Leibniz Institute, Germany</li>
+                <li>University of California, Berkeley, USA</li>
+                <li>Research institutions in Argentina and Venezuela</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Selected Awards & Recognition</h2>
+            <div class="awards-list">
+                <div class="award-item">
+                    <strong>2021-present</strong>
+                    Senior Research Fellow at Murdoch University for research on biotechnology for human microbiome
+                </div>
+                <div class="award-item">
+                    <strong>2015</strong>
+                    President of Environmental Microbiology and Biotechnology Latin American Association
+                </div>
+                <div class="award-item">
+                    <strong>2014</strong>
+                    British Council Researcher Links Award for best proposal for binational workshop
+                </div>
+                <div class="award-item">
+                    <strong>2010</strong>
+                    Best scientific work presented at Iberoamerican Congress on Biotechnology and Biodiversity
+                </div>
+                <div class="award-item">
+                    <strong>2008</strong>
+                    BioSolar-Detox project featured as one of twelve best examples of Swiss cooperation with developing countries
+                </div>
+                <div class="award-item">
+                    <strong>2005</strong>
+                    Leonardo Santamaria Award nomination as featured professor in Faculty of Engineering
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Current Research</h2>
+            <div class="timeline-item">
+                <span class="timeline-date">2021-present</span>
+                <h3>Human Gut Microbiome in Bioreactors</h3>
+                <p>Australian National Phenome Center, Murdoch University</p>
+                <p>Conducting research on intestinal microbiome cultivation and analysis using advanced bioreactor systems.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Academic Links</h2>
+            <div class="links-section">
+                <a href="https://scholar.google.com" class="link-button" target="_blank">
+                    🎓 Google Scholar
+                </a>
+                <a href="https://www.researchgate.net" class="link-button" target="_blank">
+                    🔬 ResearchGate
+                </a>
+                <a href="https://orcid.org" class="link-button" target="_blank">
+                    🆔 ORCID Profile
+                </a>
+                <a href="https://www.univalle.edu.co" class="link-button" target="_blank">
+                    🏛️ Universidad del Valle
+                </a>
+                <a href="https://australian-npc.org" class="link-button" target="_blank">
+                    🇦🇺 Australian NPC
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Languages</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div style="padding: 1rem; background: #f8f9fa; border-radius: 6px;">
+                    <strong style="color: #1e3c72;">Spanish</strong>
+                    <p>Native language</p>
+                </div>
+                <div style="padding: 1rem; background: #f8f9fa; border-radius: 6px;">
+                    <strong style="color: #1e3c72;">English</strong>
+                    <p>Professional proficiency</p>
+                </div>
+                <div style="padding: 1rem; background: #f8f9fa; border-radius: 6px;">
+                    <strong style="color: #1e3c72;">French</strong>
+                    <p>Good level</p>
+                </div>
+                <div style="padding: 1rem; background: #f8f9fa; border-radius: 6px;">
+                    <strong style="color: #1e3c72;">Russian</strong>
+                    <p>Good level</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>Professor Janneth Sanabria Gómez</strong></p>
+        <p style="margin-top: 0.5rem; opacity: 0.9;">Environmental Microbiology and Biotechnology Laboratory</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">Universidad del Valle - Cali, Colombia</p>
+    </footer>
+</body>
+</html>
